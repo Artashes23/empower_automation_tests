@@ -12,6 +12,7 @@ from webdriver_manager.opera import OperaDriverManager
 import json
 import requests
 
+chrome_path = "/usr/bin/chromium"
 
 def pytest_addoption(parser):
     parser.addoption(
@@ -32,7 +33,7 @@ def setup():
     chrome_options.add_argument("--log-level=3")
     chrome_options.add_argument("window-size=1920,1200")
     chrome_options.add_argument("--headless")
-    browser = webdriver.Chrome(executable_path=ChromeDriverManager().install(),options = chrome_options)
+    browser = webdriver.Chrome(executable_path=chrome_path,options = chrome_options)
     yield browser
     browser.quit()
 
