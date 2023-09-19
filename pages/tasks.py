@@ -1,7 +1,7 @@
 import sys
-sys.path.append("..")
-from pages.base_page import BasePage
-from config.config import Main_Page_Data,Create_Init_Page,Inside_Initiative_Page,Ideation_Data,Analytics,Tasks
+
+from ..pages.base_page import BasePage
+from ..config.config import Main_Page_Data,Create_Init_Page,Inside_Initiative_Page,Ideation_Data,Analytics,Tasks
 import os
 from time import sleep 
 import datetime

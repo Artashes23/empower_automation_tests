@@ -1,6 +1,6 @@
 import sys
-sys.path.append("..")
-from pages.lanes import check_initiative_lanes
+
+from ..pages.lanes import check_initiative_lanes
 import dotenv
 from dotenv import load_dotenv
 import os

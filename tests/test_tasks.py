@@ -1,7 +1,7 @@
 import sys
-sys.path.append("..")
+
 import os
-from pages.tasks import Check_Tasks
+from ..pages.tasks import Check_Tasks
 
 class Test_Tasks(Check_Tasks):
     

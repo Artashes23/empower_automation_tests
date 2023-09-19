@@ -1,6 +1,6 @@
 import sys
-sys.path.append("..")
-from pages.huddles import Check_Huddles
+
+from ..pages.huddles import Check_Huddles
 import os
 
 
