@@ -1,6 +1,6 @@
 import sys
-sys.path.append("..")
-from pages.analytics import Check_Analytics
+
+from ..pages.analytics import Check_Analytics
 from dotenv import load_dotenv
 import os
 from pages.tasks import Tasks
