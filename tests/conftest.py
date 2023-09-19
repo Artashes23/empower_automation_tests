@@ -11,7 +11,7 @@ from selenium.webdriver.edge.options import Options as Edge_Options
 from webdriver_manager.opera import OperaDriverManager
 import json
 import requests
-import chromedriver_autoinstaller
+
 
 def pytest_addoption(parser):
     parser.addoption(

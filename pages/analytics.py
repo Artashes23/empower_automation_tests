@@ -1,5 +1,6 @@
 import sys
-sys.path.append("..")
+sys.path.append("...") 
+
 from config.config import Main_Page_Data,Inside_Initiative_Page,Create_Init_Page,Ideation_Data,Analytics
 from pages.base_page import BasePage
 import os
@@ -85,6 +86,7 @@ class Check_Analytics(BasePage):
         self.click(Create_Init_Page.delete_dropdown)
         self.click(Create_Init_Page.delete_drop_delete_btn)
         self.click(Create_Init_Page.confirm_btn)
+        print(sys.path)
         assert int(active_inits_count_after) == int(active_inits_count_before) + 1
 
 
