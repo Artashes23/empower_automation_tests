@@ -1,4 +1,3 @@
-import sys
 
 from pages.analytics import Check_Analytics
 from dotenv import load_dotenv
