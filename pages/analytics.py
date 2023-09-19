@@ -1,4 +1,6 @@
-
+import sys
+sys.path.append("..") 
+print(sys.path)
 from config.config import Main_Page_Data,Inside_Initiative_Page,Create_Init_Page,Ideation_Data,Analytics
 from pages.base_page import BasePage
 import os
