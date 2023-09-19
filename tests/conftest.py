@@ -32,7 +32,7 @@ def setup():
     chrome_options.add_argument("--log-level=3")
     chrome_options.add_argument("window-size=1920,1200")
     chrome_options.add_argument("--headless")
-    browser = webdriver.Chrome(ChromeDriverManager().install(),options = chrome_options)
+    browser = webdriver.Chrome(r"/usr/bin/chromium",options = chrome_options)
     yield browser
     browser.quit()
 
