@@ -35,7 +35,8 @@ def setup():
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
-    browser = webdriver.Chrome(ChromeDriverManager().install(),options = chrome_options)
+    chrome_options.binary_location = "/usr/bin/chromium"
+    browser = webdriver.Chrome(options = chrome_options)
         
     
     yield browser
