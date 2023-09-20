@@ -38,7 +38,7 @@ def cmdopt(request):
 @pytest.fixture
 def setup():
     #browser = webdriver.Chrome(Service = Service(ChromeDriverManager(log_level=3).install()),options = chr)
-    chrome_options = ChromeOptions()
+    chrome_options = Options()
     #service = Service()
     chrome_options.add_argument("--capture=no")
     chrome_options.add_argument("--log-level=3")
