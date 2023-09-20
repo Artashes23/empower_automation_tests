@@ -13,7 +13,7 @@ import json
 import requests
 from selenium.webdriver.chrome.service import Service as ChromeService
 
-
+chrome_options = Options()
 chromedriver_binary_path = "/usr/local/bin/chromedriver.exe"  # Path inside the container
 chrome_options.binary_location = "/usr/bin/chromium"
 
@@ -32,7 +32,7 @@ def cmdopt(request):
 @pytest.fixture
 def setup():
     #browser = webdriver.Chrome(Service = Service(ChromeDriverManager(log_level=3).install()),options = chr)
-    chrome_options = Options()
+    
     #service = Service()
     chrome_options.add_argument("--capture=no")
     chrome_options.add_argument("--log-level=3")
