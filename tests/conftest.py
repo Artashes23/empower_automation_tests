@@ -35,8 +35,12 @@ def setup():
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
-
-    browser = webdriver.Chrome(executable_path=chrome_path,options = chrome_options)
+    try:
+        browser = webdriver.Chrome(chrome_path=chrome_binary_path, options=chrome_options)
+        # Rest of your Selenium code here
+    except Exception as e:
+        print(f"Error: {str(e)}")
+    
     yield browser
     browser.quit()
 
