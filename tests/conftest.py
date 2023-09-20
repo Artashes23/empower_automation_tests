@@ -41,7 +41,7 @@ def setup():
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
     
-    browser = webdriver.Chrome( options=chrome_options)
+    browser = webdriver.Chrome(executable_path=chromedriver_binary_path,options=chrome_options)
         
     
     yield browser
