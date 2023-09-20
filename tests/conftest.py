@@ -14,7 +14,7 @@ import requests
 from selenium.webdriver.chrome.service import Service as ChromeService
 
 chrome_options = Options()
-chromedriver_binary_path = "/usr/local/bin/chromedriver.exe"  # Path inside the container
+chromedriver_binary_path = "/usr/bin/chromedriver.exe"  # Path inside the container
 chrome_options.binary_location = "/usr/bin/chromium"
 
 #chrome_path = "/usr/bin/chromium"
