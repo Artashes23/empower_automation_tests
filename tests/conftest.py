@@ -13,9 +13,9 @@ import json
 import requests
 from selenium.webdriver.chrome.service import Service as ChromeService
 
-chrome_options = Options()
-chromedriver_binary_path = "/usr/bin/chromedriver.exe"  # Path inside the container
-chrome_options.binary_location = "/usr/bin/chromium"
+#chrome_options = Options()
+#chromedriver_binary_path = "/usr/local/bin/chromedriver.exe"  # Path inside the container
+#chrome_options.binary_location = "/usr/bin/chromium"
 
 #chrome_path = "/usr/bin/chromium"
 
@@ -31,17 +31,17 @@ def cmdopt(request):
 
 @pytest.fixture
 def setup():
-    #browser = webdriver.Chrome(Service = Service(ChromeDriverManager(log_level=3).install()),options = chr)
-    
-    #service = Service()
-    chrome_options.add_argument("--capture=no")
-    chrome_options.add_argument("--log-level=3")
-    chrome_options.add_argument("window-size=1920,1200")
+    # Set Chrome options (if needed)
+    chrome_options = Options()
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
-    
-    browser = webdriver.Chrome(executable_path=chromedriver_binary_path,options=chrome_options)
+
+    # Specify the path to the ChromeDriver executable inside the container
+    chromedriver_binary_path = "/usr/local/bin/chromedriver.exe"
+
+    # Create a WebDriver instance with the specified executable path and options
+    browser = webdriver.Chrome(executable_path=chromedriver_binary_path, options=chrome_options)
         
     
     yield browser
