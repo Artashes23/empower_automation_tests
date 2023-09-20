@@ -43,7 +43,7 @@ def setup():
     chromedriver_binary_path = "/usr/local/bin/chromedriver.exe"
 
     # Create a WebDriver instance with the specified executable path and options
-    browser = webdriver.Chrome(executable_path=chromedriver_binary_path, options=chrome_options)
+    browser = webdriver.Chrome(executable_path=r"/usr/local/bin/chromedriver.exe", options=chrome_options)
         
     
     yield browser
