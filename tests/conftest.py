@@ -15,7 +15,7 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 
 
 chromedriver_binary_path = "/usr/local/bin/chromedriver.exe"  # Path inside the container
-
+chrome_options.binary_location = "/usr/bin/chromium"
 
 #chrome_path = "/usr/bin/chromium"
 
@@ -40,7 +40,7 @@ def setup():
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
-    chrome_options.binary_location = "/usr/bin/chromium"
+    
     browser = webdriver.Chrome(executable_path=chromedriver_binary_path, options=chrome_options)
         
     
