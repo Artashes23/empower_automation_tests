@@ -11,7 +11,18 @@ from selenium.webdriver.edge.options import Options as Edge_Options
 from webdriver_manager.opera import OperaDriverManager
 import json
 import requests
+from selenium.webdriver.chrome.service import Service as ChromeService
 
+
+chromedriver_binary_path = "/usr/local/bin/chromedriver.exe"  # Path inside the container
+
+chrome_options = ChromeOptions()
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--disable-dev-shm-usage")
+chrome_options.binary_location = "/usr/bin/chromium"  # Replace with the correct path to Chromium in the container
+
+browser = webdriver.Chrome(executable_path=chromedriver_binary_path, options=chrome_options)
 #chrome_path = "/usr/bin/chromium"
 
 def pytest_addoption(parser):
@@ -27,7 +38,7 @@ def cmdopt(request):
 @pytest.fixture
 def setup():
     #browser = webdriver.Chrome(Service = Service(ChromeDriverManager(log_level=3).install()),options = chr)
-    chrome_options = Options()
+    chrome_options = ChromeOptions()
     #service = Service()
     chrome_options.add_argument("--capture=no")
     chrome_options.add_argument("--log-level=3")
@@ -36,7 +47,7 @@ def setup():
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.binary_location = "/usr/bin/chromium"
-    browser = webdriver.Chrome(options = chrome_options)
+    browser = webdriver.Chrome(executable_path=chromedriver_binary_path, options=chrome_options)
         
     
     yield browser
