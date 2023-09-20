@@ -12,7 +12,7 @@ from webdriver_manager.opera import OperaDriverManager
 import json
 import requests
 
-chrome_path = "/usr/bin/chromium"
+#chrome_path = "/usr/bin/chromium"
 
 def pytest_addoption(parser):
     parser.addoption(
@@ -28,18 +28,15 @@ def cmdopt(request):
 def setup():
     #browser = webdriver.Chrome(Service = Service(ChromeDriverManager(log_level=3).install()),options = chr)
     chrome_options = Options()
-    service = Service()
+    #service = Service()
     chrome_options.add_argument("--capture=no")
     chrome_options.add_argument("--log-level=3")
     chrome_options.add_argument("window-size=1920,1200")
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
-    try:
-        browser = webdriver.Chrome(chrome_path=chrome_binary_path, options=chrome_options)
-        # Rest of your Selenium code here
-    except Exception as e:
-        print(f"Error: {str(e)}")
+    browser = webdriver.Chrome(ChromeDriverManager().install(),options = chrome_options)
+        
     
     yield browser
     browser.quit()
