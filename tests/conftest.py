@@ -29,6 +29,7 @@ def pytest_addoption(parser):
 def cmdopt(request):
     return request.config.getoption("--cmdopt")
 
+chromedriver_path = "/path/in/container/chromedriver"
 @pytest.fixture
 def setup():
     # Set Chrome options (if needed)
@@ -43,7 +44,7 @@ def setup():
     #chromedriver_binary_path = "/usr/local/bin/chromedriver.exe"
 
     # Create a WebDriver instance with the specified executable path and options
-    browser = webdriver.Chrome(executable_path=r"/usr/local/bin/chromedriver", options=chrome_options)
+    browser = webdriver.Chrome(executable_path=chromedriver_path, options=chrome_options)
         
     
     yield browser
