@@ -13,11 +13,9 @@ import json
 import requests
 from selenium.webdriver.chrome.service import Service as ChromeService
 
-#chrome_options = Options()
-#chromedriver_binary_path = "/usr/local/bin/chromedriver.exe"  # Path inside the container
-#chrome_options.binary_location = "/usr/bin/chromium"
 
-#chrome_path = "/usr/bin/chromium"
+
+
 
 def pytest_addoption(parser):
     parser.addoption(
@@ -32,18 +30,11 @@ def cmdopt(request):
 chromedriver_path = "/path/in/container/chromedriver"
 @pytest.fixture
 def setup():
-    # Set Chrome options (if needed)
     chrome_options = Options()
-    chrome_options.binary_location = "/usr/bin/chromium"
-    #chrome_options.add_argument("--headless")
-    #chrome_options.add_argument("--no-sandbox")
-    #chrome_options.add_argument("--disable-dev-shm-usage")
-    
-
-    # Specify the path to the ChromeDriver executable inside the container
-    #chromedriver_binary_path = "/usr/local/bin/chromedriver.exe"
-
-    # Create a WebDriver instance with the specified executable path and options
+    chrome_options.binary_location = "/usr/bin/google-chrome"
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-dev-shm-usage")
     browser = webdriver.Chrome(executable_path=chromedriver_path, options=chrome_options)
         
     
