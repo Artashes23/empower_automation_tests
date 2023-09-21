@@ -27,7 +27,7 @@ def pytest_addoption(parser):
 def cmdopt(request):
     return request.config.getoption("--cmdopt")
 
-chromedriver_path = "/path/in/container/chromedriver"
+chromedriver_path = "/usr/local/bin/chromedriver"
 @pytest.fixture
 def setup():
     chrome_options = Options()
