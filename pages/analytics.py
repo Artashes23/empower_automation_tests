@@ -12,6 +12,7 @@ class Check_Analytics(BasePage):
         self.send_keys(Main_Page_Data.email_field,os.getenv('EMAIL'))
         self.send_keys(Main_Page_Data.pswd_field,os.getenv("PASSWORD"))
         self.click(Main_Page_Data.login_btn)
+        sleep(2)
         self.click(Main_Page_Data.analytics_category)
         try:
             contributers_count = self.find_text(Analytics.top_contributors_tasks_count)
