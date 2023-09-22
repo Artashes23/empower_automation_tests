@@ -10,7 +10,7 @@ import datetime
 
 class Check_Tasks(BasePage):
     def check_create_task(self):
-        self.send_keys(Main_Page_Data.email_field,os.getenv('EMAIL'))
+        self.send_keys(Main_Page_Data.email_field,os.getenv("EMAIL"))
         self.send_keys(Main_Page_Data.pswd_field,os.getenv("PASSWORD"))
         self.click(Main_Page_Data.login_btn)
         self.click(Main_Page_Data.new_initiative_btn)
@@ -43,7 +43,7 @@ class Check_Tasks(BasePage):
         
     
     def check_create_task_without_name(self):
-        self.send_keys(Main_Page_Data.email_field,os.getenv('EMAIL'))
+        self.send_keys(Main_Page_Data.email_field,os.getenv("EMAIL"))
         self.send_keys(Main_Page_Data.pswd_field,os.getenv("PASSWORD"))
         self.click(Main_Page_Data.login_btn)
         self.click(Main_Page_Data.new_initiative_btn)
@@ -65,7 +65,7 @@ class Check_Tasks(BasePage):
         assert valid_error == "Name is required"
     
     def check_tasks_edit(self):
-        self.send_keys(Main_Page_Data.email_field,os.getenv('EMAIL'))
+        self.send_keys(Main_Page_Data.email_field,os.getenv("EMAIL"))
         self.send_keys(Main_Page_Data.pswd_field,os.getenv("PASSWORD"))
         self.click(Main_Page_Data.login_btn)
         self.click(Main_Page_Data.new_initiative_btn)
@@ -102,7 +102,7 @@ class Check_Tasks(BasePage):
 
     def check_due_complete_interval(self):
         d_today = datetime.date.today()
-        self.send_keys(Main_Page_Data.email_field,os.getenv('EMAIL'))
+        self.send_keys(Main_Page_Data.email_field,os.getenv("EMAIL"))
         self.send_keys(Main_Page_Data.pswd_field,os.getenv("PASSWORD"))
         self.click(Main_Page_Data.login_btn)
         self.click(Main_Page_Data.new_initiative_btn)
