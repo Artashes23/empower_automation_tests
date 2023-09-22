@@ -52,7 +52,7 @@ class Create_Init_Page():
     pick_a_goal_first_option = (By.XPATH,"//div[@id = 'goal-dropdown']/div[2]/div[1]")
     pick_a_goal_all_options = (By.XPATH,"//span[@id = 'goal-dropdown']/parent::div/following-sibling::div/div")
     select_owner_field = (By.XPATH,'//input[@placeholder="Select owner"]')
-    select_owner_ani = (By.XPATH,"//div[@class = 'scrollable-select-content show']/p[text() = 'Ani Bad']")
+    select_owner_ani = (By.XPATH,"//div[@class = 'scrollable-select-content']/p[text() = 'Ani Bad']")
     select_contributor = (By.XPATH,"//input[@placeholder = 'Select contributor']")
     select_contributor_ani = (By.XPATH,"//input[@name = 'Ani Bad']")
     create_btn = (By.XPATH,"//div[@class = 'base-header-page']/div[2]/button")
