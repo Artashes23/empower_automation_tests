@@ -7,7 +7,7 @@ from time import sleep
 
 class Check_Huddles(BasePage):
     def check_contributor_in_huddles(self):
-        self.send_keys(Main_Page_Data.email_field,os.getenv('EMAIL'))
+        self.send_keys(Main_Page_Data.email_field,os.getenv("EMAIL"))
         self.send_keys(Main_Page_Data.pswd_field,os.getenv("PASSWORD"))
         self.click(Main_Page_Data.login_btn)
         sleep(2)
