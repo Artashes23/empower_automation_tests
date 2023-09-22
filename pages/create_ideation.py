@@ -13,8 +13,8 @@ from selenium.webdriver.common.keys import Keys
 import os
 
 # Get the current working directory (the directory where your Python script is located)
-current_directory = os.path.dirname(__file__)
-
+#current_directory = os.path.dirname(__file__)
+current_directory = os.getcwd()
 # Specify the relative path to the image file
 image_path = os.path.join(current_directory, 'images.png')
 
