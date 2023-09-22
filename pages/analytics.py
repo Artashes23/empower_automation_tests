@@ -9,7 +9,7 @@ from time import sleep
 
 class Check_Analytics(BasePage):
     def check_top_contributors_and_active_tasks(self):
-        self.send_keys(Main_Page_Data.email_field,os.getenv('EMAIL'))
+        self.send_keys(Main_Page_Data.email_field,os.getenv("EMAIL"))
         self.send_keys(Main_Page_Data.pswd_field,os.getenv("PASSWORD"))
         self.click(Main_Page_Data.login_btn)
         sleep(2)
@@ -64,7 +64,7 @@ class Check_Analytics(BasePage):
 
 
     def check_initiatives_count_in_analytics(self):
-        self.send_keys(Main_Page_Data.email_field,os.getenv('EMAIL'))
+        self.send_keys(Main_Page_Data.email_field,os.getenv("EMAIL"))
         self.send_keys(Main_Page_Data.pswd_field,os.getenv("PASSWORD"))
         self.click(Main_Page_Data.login_btn)
         active_inits_count_before = self.find_text(Analytics.active_init_count)
@@ -92,7 +92,7 @@ class Check_Analytics(BasePage):
 
 
     def check_analytics_active_inits_graphic(self):
-        self.send_keys(Main_Page_Data.email_field,os.getenv('EMAIL'))
+        self.send_keys(Main_Page_Data.email_field,os.getenv("EMAIL"))
         self.send_keys(Main_Page_Data.pswd_field,os.getenv("PASSWORD"))
         self.click(Main_Page_Data.login_btn)
         self.click(Main_Page_Data.analytics_category)
