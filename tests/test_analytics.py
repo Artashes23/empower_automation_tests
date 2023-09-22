@@ -11,7 +11,7 @@ import pytest
 
 
 class Test_Analytics(Check_Analytics):
-    #@pytest.mark.skip(reason="Not finished")
+    @pytest.mark.skip(reason="Not finished")
     def test_top_contributors_and_tasks_TC_10(self,setup):
         self.browser = setup
         self.browser.get(os.getenv("URL"))
