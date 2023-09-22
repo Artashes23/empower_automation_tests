@@ -64,6 +64,7 @@ class Check_Analytics(BasePage):
 
 
     def check_initiatives_count_in_analytics(self):
+        sleep(2)
         self.send_keys(Main_Page_Data.email_field,os.getenv("EMAIL"))
         self.send_keys(Main_Page_Data.pswd_field,os.getenv("PASSWORD"))
         self.click(Main_Page_Data.login_btn)
