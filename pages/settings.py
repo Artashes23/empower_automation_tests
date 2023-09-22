@@ -8,7 +8,7 @@ from time import sleep
 class check_settings_page(BasePage):
     load_dotenv()
     def check_settings_add_delete_goal(self):
-        self.send_keys(Main_Page_Data.email_field,os.getenv('EMAIL'))
+        self.send_keys(Main_Page_Data.email_field,os.getenv("EMAIL"))
         self.send_keys(Main_Page_Data.pswd_field,os.getenv("PASSWORD"))
         self.click(Main_Page_Data.login_btn)
         self.click(Settings_Page.settings_category_btn)
@@ -30,7 +30,7 @@ class check_settings_page(BasePage):
         assert 'TC_5' == matched_element, 'incorrect first goal'
 
     def check_langauge_switching(self):
-        self.send_keys(Main_Page_Data.email_field,os.getenv('EMAIL'))
+        self.send_keys(Main_Page_Data.email_field,os.getenv("EMAIL"))
         self.send_keys(Main_Page_Data.pswd_field,os.getenv("PASSWORD"))
         self.click(Main_Page_Data.login_btn)
         self.click(Settings_Page.settings_category_btn)
@@ -52,7 +52,7 @@ class check_settings_page(BasePage):
         assert new_category_german == 'Neu','Incorrect translation'
     
     def delete(self):
-        self.send_keys(Main_Page_Data.email_field,os.getenv('EMAIL'))
+        self.send_keys(Main_Page_Data.email_field,os.getenv("EMAIL"))
         self.send_keys(Main_Page_Data.pswd_field,os.getenv("PASSWORD"))
         self.click(Main_Page_Data.login_btn)
         self.click(Main_Page_Data.active_category_btn)
