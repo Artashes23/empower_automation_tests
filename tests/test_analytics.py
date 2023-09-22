@@ -19,7 +19,8 @@ class Test_Analytics(Check_Analytics):
 
     def test_initiatives_count_in_analytics_TC_15(self,setup):
         self.browser = setup
-        self.browser.get(os.getenv("URL"))
+        #self.browser.get(os.getenv("URL"))
+        self.browser.get("https://empower-frontend-us-dev.herokuapp.com/")
         self.check_initiatives_count_in_analytics()
 
 
