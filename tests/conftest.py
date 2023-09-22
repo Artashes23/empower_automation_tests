@@ -32,6 +32,9 @@ chromedriver_path = "/usr/local/bin/chromedriver"
 def setup():
     chrome_options = Options()
     chrome_options.binary_location = "/usr/bin/google-chrome"
+    chrome_options.add_argument("--capture=no")
+    chrome_options.add_argument("--log-level=3")
+    chrome_options.add_argument("window-size=1920,1200")
     chrome_options.add_argument("--headless")
     #chrome_options.add_argument("--no-sandbox")
     #chrome_options.add_argument("--disable-dev-shm-usage")
