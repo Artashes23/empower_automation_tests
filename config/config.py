@@ -165,7 +165,7 @@ class Tasks():
     task_name_field = (By.XPATH,"//input[@id = 'task-name-input']")
     task_description_field = (By.XPATH,"//textarea[@id = 'task-description-input']")
     select_owner_drop = (By.XPATH,"//span[text() = 'Select owner']/parent::div")
-    task_due_date = (By.XPATH,"//div[text() = '2']")
+    task_due_date = (By.XPATH,"//div[text() = '28']")
     select_owner_me = (By.XPATH,"//div[text() = 'Ani Bad']")
     task_create_btn = (By.XPATH,"//button[@id = 'update-or-create-task-confirm']")
     task_name_check = (By.XPATH,"//tbody/tr[1]/td[1]")
