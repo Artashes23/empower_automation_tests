@@ -25,7 +25,7 @@ class Check_Ideations(BasePage):
     load_dotenv()
     def check_create_delete(self):
         logo_path = (image_path)
-        self.send_keys(Main_Page_Data.email_field,os.getenv('EMAIL'))
+        self.send_keys(Main_Page_Data.email_field,os.getenv("EMAIL"))
         self.send_keys(Main_Page_Data.pswd_field,os.getenv("PASSWORD"))
         self.click(Main_Page_Data.login_btn)
         ideas_count_before = self.find_text(Ideation_Data.ideas_count)
@@ -112,7 +112,7 @@ class Check_Ideations(BasePage):
         assert success_message == 'Your votes have been submitted successfully!','Wrong success message'
 
     def create_ideation_without_switching_any_switch(self):
-        self.send_keys(Main_Page_Data.email_field,os.getenv('EMAIL'))
+        self.send_keys(Main_Page_Data.email_field,os.getenv("EMAIL"))
         self.send_keys(Main_Page_Data.pswd_field,os.getenv("PASSWORD"))
         self.click(Main_Page_Data.login_btn)
         self.click(Main_Page_Data.new_initiative_btn)
@@ -139,7 +139,7 @@ class Check_Ideations(BasePage):
         assert valid_error == 'Please enable at least one of the switches'
     
     def change_anything_after_publishing_ideation(self):
-        self.send_keys(Main_Page_Data.email_field,os.getenv('EMAIL'))
+        self.send_keys(Main_Page_Data.email_field,os.getenv("EMAIL"))
         self.send_keys(Main_Page_Data.pswd_field,os.getenv("PASSWORD"))
         self.click(Main_Page_Data.login_btn)
         sleep(2)
@@ -180,7 +180,7 @@ class Check_Ideations(BasePage):
         assert comments ==True, 'Comments switch is not disabled'
 
     def check_ideation_result(self):
-        self.send_keys(Main_Page_Data.email_field,os.getenv('EMAIL'))
+        self.send_keys(Main_Page_Data.email_field,os.getenv("EMAIL"))
         self.send_keys(Main_Page_Data.pswd_field,os.getenv("PASSWORD"))
         self.click(Main_Page_Data.login_btn)
         sleep(2)
