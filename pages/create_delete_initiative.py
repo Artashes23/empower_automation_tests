@@ -10,7 +10,7 @@ import os
 class Check_Create_Init(BasePage):
     load_dotenv()
     def check_create_delete(self):
-        self.send_keys(Main_Page_Data.email_field,os.getenv('EMAIL'))
+        self.send_keys(Main_Page_Data.email_field,os.getenv("EMAIL"))
         self.send_keys(Main_Page_Data.pswd_field,os.getenv("PASSWORD"))
         self.click(Main_Page_Data.login_btn)
         self.click(Main_Page_Data.new_initiative_btn)
@@ -35,7 +35,7 @@ class Check_Create_Init(BasePage):
         assert saved_description == 'test1','Wrong description'
 
     def check_create_init_without_title(self):
-        self.send_keys(Main_Page_Data.email_field,os.getenv('EMAIL'))
+        self.send_keys(Main_Page_Data.email_field,os.getenv("EMAIL"))
         self.send_keys(Main_Page_Data.pswd_field,os.getenv("PASSWORD"))
         self.click(Main_Page_Data.login_btn)
         self.click(Main_Page_Data.new_initiative_btn)
