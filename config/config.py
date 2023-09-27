@@ -59,7 +59,7 @@ class Create_Init_Page():
     TC_1_title_for_checking = (By.XPATH,"//div[@class = 'lane-page']/div[1]/div/div/div[3]/div[1]")
     TC_1_description_for_check = (By.XPATH,"//div[@class = 'lane-page']/div[1]/div/div/div[3]/div[2]")
     delete_dropdown = (By.XPATH,"//div[@class = 'popover-open-icon']")
-    delete_drop_delete_btn = (By.XPATH,"//span[text() = 'Delete']")
+    delete_drop_delete_btn = (By.XPATH,"//div[@id = 'delete']")
     confirm_btn = (By.ID,'confirm-confirm')
     for_hover = (By.XPATH,"//div[@class = 'lane-page']/div[1]/div//div[@class = 'initiative-card--content']")
     initiative_title_valid_error = (By.XPATH,"//input[@name = 'name']/parent::div/label")
