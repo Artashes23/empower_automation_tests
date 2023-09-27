@@ -7,7 +7,7 @@ from time import sleep
 
 class Check_Huddles(BasePage):
     def check_contributor_in_huddles(self):
-        self.send_keys(Main_Page_Data.email_field,os.getenv("EMAIL"))
+        self.send_keys(Main_Page_Data.email_field,os.getenv('EMAIL'))
         self.send_keys(Main_Page_Data.pswd_field,os.getenv("PASSWORD"))
         self.click(Main_Page_Data.login_btn)
         sleep(2)
@@ -28,11 +28,7 @@ class Check_Huddles(BasePage):
         self.click(Create_Init_Page.new_category)
         self.hover(Create_Init_Page.for_hover)
         self.click(Create_Init_Page.delete_dropdown)
-        sleep(3)
-        try:
-            self.click(Create_Init_Page.delete_drop_delete_btn)
-        except:
-            self.click(Create_Init_Page.delete_drop_delete_btn)
+        self.click(Create_Init_Page.delete_drop_delete_btn)
         self.click(Create_Init_Page.confirm_btn)
         sleep(2)
         assert a == True, 'Wrong contributer in huddles'
