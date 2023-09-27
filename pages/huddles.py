@@ -28,6 +28,7 @@ class Check_Huddles(BasePage):
         self.click(Create_Init_Page.new_category)
         self.hover(Create_Init_Page.for_hover)
         self.click(Create_Init_Page.delete_dropdown)
+        sleep(3)
         try:
             self.click(Create_Init_Page.delete_drop_delete_btn)
         except:
