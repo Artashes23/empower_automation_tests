@@ -28,7 +28,10 @@ class Check_Huddles(BasePage):
         self.click(Create_Init_Page.new_category)
         self.hover(Create_Init_Page.for_hover)
         self.click(Create_Init_Page.delete_dropdown)
-        self.click(Create_Init_Page.delete_drop_delete_btn)
+        try:
+            self.click(Create_Init_Page.delete_drop_delete_btn)
+        except:
+            self.click(Create_Init_Page.delete_drop_delete_btn)
         self.click(Create_Init_Page.confirm_btn)
         sleep(2)
         assert a == True, 'Wrong contributer in huddles'
