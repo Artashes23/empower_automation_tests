@@ -49,7 +49,7 @@ class Check_Create_Init(BasePage):
         self.click(Create_Init_Page.select_contributor_ani)
         self.click(Create_Init_Page.create_btn)
         validation_error = self.find_text(Create_Init_Page.initiative_title_valid_error)
-        assert validation_error == 'title is required', 'Wrong validation error'
+        assert validation_error == 'Name is required', 'Wrong validation error'
         
     
 
