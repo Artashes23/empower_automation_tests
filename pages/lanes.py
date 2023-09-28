@@ -33,16 +33,28 @@ class check_initiative_lanes(BasePage):
         self.click(Main_Page_Data.home_btn)
         self.click(Main_Page_Data.active_category_btn)
         sleep(5)
-        active_category = self.element_presence(Main_Page_Data.for_tc_4)
+        try:
+            active_category = self.element_presence(Main_Page_Data.for_tc_4)
+        except:
+            self.send_keys(Main_Page_Data.body,Keys.COMMAND + 'r')
+            active_category = self.element_presence(Main_Page_Data.for_tc_4)
         self.click(Main_Page_Data.for_tc_4)
         self.click(Inside_Initiative_Page.lane_update_drop)
         self.click(Inside_Initiative_Page.lane_update_completed)
         self.click(Main_Page_Data.home_btn)
         sleep(2)
         self.click(Main_Page_Data.completed_category_btn)
-        completed_category = self.element_presence(Main_Page_Data.for_tc_4)
+        try:
+            completed_category = self.element_presence(Main_Page_Data.for_tc_4)
+        except:
+            self.send_keys(Main_Page_Data.body,Keys.COMMAND + 'r')
+            completed_category = self.element_presence(Main_Page_Data.for_tc_4)
         sleep(2)
-        closed_category = self.element_presence(Main_Page_Data.for_tc_4)
+        try:
+            closed_category = self.element_presence(Main_Page_Data.for_tc_4)
+        except:
+            self.send_keys(Main_Page_Data.body,Keys.COMMAND + 'r')
+            closed_category = self.element_presence(Main_Page_Data.for_tc_4)
         self.click(Main_Page_Data.for_tc_4)
         self.click(Inside_Initiative_Page.lane_update_drop)
         self.click(Inside_Initiative_Page.lane_update_closed)
